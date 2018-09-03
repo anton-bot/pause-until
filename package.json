@@ -1,0 +1,34 @@
+{
+  "name": "pause-until",
+  "version": "1.0.0",
+  "description": "Pauses the execution of a function until you manually unblock it.",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "keywords": [
+    "promises",
+    "block",
+    "pause",
+    "pause-until",
+    "thread",
+    "threads",
+    "event-loop",
+    "promise-timeout",
+    "pause-execution",
+    "suspend",
+    "suspend-execution",
+    "block-until",
+    "pause-until-resolved",
+    "promise-pause",
+    "promise",
+    "settimeout",
+    "await",
+    "wait-until"
+  ],
+  "author": "Anton Ivanov <anton@ivanov.hk>",
+  "license": "Unlicense",
+  "dependencies": {
+    "nodejs-promise-timeout": "^1.0.0"
+  }
+}
