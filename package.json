@@ -1,11 +1,12 @@
 {
   "name": "pause-until",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Pauses the execution of a function until you manually unblock it.",
   "main": "index.js",
   "scripts": {
     "test": "exit 0"
   },
+  "repository": "https://github.com/catcher-in-the-try/pause-until",
   "keywords": [
     "promises",
     "block",

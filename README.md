@@ -12,11 +12,14 @@ let it continue only when the data is loaded.
 ```js
 const { pause, resume } = require('pause-until');
 
-let data = {};
+let data = null;
 
 async function search(searchWhat) {
-	// We'll wait here until the data is loaded:
-	await pause('data loaded');
+	if (!data) {
+		// We'll wait here until the data is loaded:
+		await pause('data loaded');
+	}
+
 	findInData(data, what);
 }
 
@@ -39,12 +42,15 @@ for 15 seconds at most, since we don't want to get stuck forever:
 ```js
 const { pause, resume } = require('pause-until');
 
-let data = {};
+let data = null;
 
 async function search(searchWhat) {
-	// We'll wait here until the data is loaded,
-	// but for 15 seconds maximum:
-	await pause('data loaded', 15000);
+	if (!data) {
+		// We'll wait here until the data is loaded,
+		// but for 15 seconds maximum:
+		await pause('data loaded', 15000);
+	}
+
 	findInData(data, what);
 }
 
@@ -67,10 +73,12 @@ const { pause, resume } = require('pause-until');
 let data = {};
 
 async function search(searchWhat) {
-	// We'll wait here until the data is loaded,
-	// but for 15 seconds maximum, and will throw
-	// an exception if we hit the timeout:
-	await pause('data loaded', 15000, true);
+	if (!data) {
+		// We'll wait here until the data is loaded,
+		// but for 15 seconds maximum:
+		await pause('data loaded', 15000, true);
+	}
+
 	findInData(data, what);
 }
 
