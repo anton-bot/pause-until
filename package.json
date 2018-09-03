@@ -1,6 +1,6 @@
 {
   "name": "pause-until",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Pauses the execution of a function until you manually unblock it.",
   "main": "index.js",
   "scripts": {
